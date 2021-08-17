@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">YANOLJA_MDB</string>
+    <!-- menu -->
+    <string name="home">홈</string>
+    <string name="location">지역</string>
+    <string name="near">내주변</string>
+    <string name="bookmark">찜</string>
+    <string name="my_page">MY 야놀자</string>
 </resources>
