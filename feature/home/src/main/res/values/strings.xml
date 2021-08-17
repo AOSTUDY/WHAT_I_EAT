@@ -4,4 +4,19 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="yanolja">yanolja</string>
     <string name="where_play">어디로 놀러갈까요?</string>
+    <string name="new_and_what">NEW &amp; HOT</string>
+    <string name="today_price">오늘의 특가</string>
+    <string name="now_location">지금 여행가기 좋은 지역</string>
+    <string name="weekly_top">위클리 인기 TOP</string>
+    <string name="weekly_famous">지난주 구매 기반 인기많은순</string>
+    <string name="entire">전체보기</string>
+    <string name="today_magazine">오늘의 인기 매거진</string>
+    <string name="yanolja_start">야놀자가 처음이신가요?</string>
+    <string name="benefit">회원가입 후 혜택을 받아보세요!</string>
+
+    <!-- tools -->
+    <string name="bus">고속버스</string>
+    <string name="noltech">돈버는놀테크</string>
+    <string name="jeju">제주도</string>
+    <string name="room">숙소</string>
 </resources>
