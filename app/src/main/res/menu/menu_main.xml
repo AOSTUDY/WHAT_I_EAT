@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/menu_location"
+        android:icon="@drawable/ic_location"
+        android:title="@string/location" />
+
+    <item
+        android:id="@+id/menu_near"
+        android:icon="@drawable/ic_near"
+        android:title="@string/near" />
+
+    <item
+        android:id="@+id/menu_bookmark"
+        android:icon="@drawable/ic_star"
+        android:title="@string/bookmark" />
+
+
+    <item
+        android:id="@+id/menu_my_page"
+        android:icon="@drawable/ic_person"
+        android:title="@string/my_page" />
+</menu>

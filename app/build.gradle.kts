@@ -7,17 +7,10 @@ plugins {
 }
 
 android {
-    compileSdk = Constants.compileSdk
-    buildToolsVersion = "30.0.3"
-
     defaultConfig {
         applicationId = Constants.packageName
-        minSdk = Constants.minSdk
-        targetSdk = Constants.targetSdk
         versionCode = Constants.versionCode
         versionName = Constants.versionName
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -30,12 +23,8 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = Versions.javaVersion
-        targetCompatibility = Versions.javaVersion
-    }
     kotlinOptions {
-        val options = this as org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+        val options = this
         options.jvmTarget = Versions.jvmVersion
     }
     buildFeatures {
@@ -44,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:home"))
+
     // Android Core
     implementation(KotlinDependencies.kotlin)
     implementation(AndroidXDependencies.coreKtx)
