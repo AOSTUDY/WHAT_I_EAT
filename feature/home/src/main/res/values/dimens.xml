@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="new_and_hot_width">60dp</dimen>
+    <dimen name="location_width">80dp</dimen>
+</resources>

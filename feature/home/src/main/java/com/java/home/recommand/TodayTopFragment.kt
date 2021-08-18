@@ -4,16 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.java.core.base.BindingFragment
 import com.java.home.R
+import com.java.home.databinding.FragmentTodayTopBinding
 
-class TodayTopFragment : Fragment() {
+class TodayTopFragment : BindingFragment<FragmentTodayTopBinding>(R.layout.fragment_today_top) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_today_top, container, false)
+    ): View {
+        super.onCreateView(inflater, container, savedInstanceState)
+
+        return binding.root
     }
 }
