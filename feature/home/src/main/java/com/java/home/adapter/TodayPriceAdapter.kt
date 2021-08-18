@@ -6,7 +6,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.java.home.R
-import com.java.home.databinding.ItemNewAndHotBinding
 import com.java.home.databinding.ItemTodayPriceBinding
 
 class TodayPriceAdapter() : RecyclerView.Adapter<TodayPriceAdapter.TodayPriceViewHolder>() {

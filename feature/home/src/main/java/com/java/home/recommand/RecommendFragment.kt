@@ -8,7 +8,11 @@ import com.google.android.material.chip.Chip
 import com.java.core.base.BindingFragment
 import com.java.core.util.stringListFrom
 import com.java.home.R
-import com.java.home.adapter.*
+import com.java.home.adapter.BannerAdapter
+import com.java.home.adapter.BenefitAdapter
+import com.java.home.adapter.LocationAdapter
+import com.java.home.adapter.NewAndHotAdapter
+import com.java.home.adapter.TodayPriceAdapter
 import com.java.home.databinding.FragmentRecommendBinding
 import com.java.home.util.ChipFactory
 
@@ -47,7 +51,8 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
             rvRecommend.adapter =
                 NewAndHotAdapter().apply { data = stringListFrom(R.array.new_and_hot_text) }
             vpAd.adapter = BannerAdapter().apply { data = stringListFrom(R.array.banner_list) }
-            rvLocation.adapter = LocationAdapter().apply { data = stringListFrom(R.array.location_text) }
+            rvLocation.adapter =
+                LocationAdapter().apply { data = stringListFrom(R.array.location_text) }
             rvSpecialPrice.adapter =
                 TodayPriceAdapter().apply { data = stringListFrom(R.array.price_list) }
         }
