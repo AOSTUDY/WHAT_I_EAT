@@ -2,4 +2,82 @@
     <string name="app_name">home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yanolja">yanolja</string>
+    <string name="where_play">어디로 놀러갈까요?</string>
+    <string name="new_and_what">NEW &amp; HOT</string>
+    <string name="today_price">오늘의 특가</string>
+    <string name="now_location">지금 여행가기 좋은 지역</string>
+    <string name="weekly_top">위클리 인기 TOP</string>
+    <string name="weekly_famous">지난주 구매 기반 인기많은순</string>
+    <string name="entire">전체보기</string>
+    <string name="today_magazine">오늘의 인기 매거진</string>
+    <string name="yanolja_start">야놀자가 처음이신가요?</string>
+    <string name="benefit">회원가입 후 혜택을 받아보세요!</string>
+
+    <string-array name="tab_text">
+        <item>추천</item>
+        <item>국내숙소</item>
+        <item>즐길거리</item>
+        <item>교통/항공</item>
+        <item>해외여행</item>
+    </string-array>
+
+    <string-array name="chip_text">
+        <item>모바일교환권</item>
+        <item>펜션</item>
+        <item>호텔</item>
+        <item>레저/티켓</item>
+        <item>모텔</item>
+        <item>게스트하우스</item>
+    </string-array>
+
+    <string-array name="new_and_hot_text">
+        <item>고속버스</item>
+        <item>풀빌라</item>
+        <item>물놀이특가</item>
+        <item>아이야놀자</item>
+        <item>호캉스패키지</item>
+        <item>맛집</item>
+    </string-array>
+
+    <string-array name="benefit_text">
+        <item>돈버는놀테크</item>
+        <item>코인뽑기머신</item>
+        <item>나만의쿠폰</item>
+        <item>카드할인</item>
+        <item>8월혜택모음</item>
+        <item>돈버는놀테크</item>
+        <item>코인뽑기머신</item>
+        <item>나만의쿠폰</item>
+        <item>카드할인</item>
+        <item>8월혜택모음</item>
+    </string-array>
+
+    <string-array name="location_text">
+        <item>제주도</item>
+        <item>강원도</item>
+        <item>부산</item>
+        <item>경상북도</item>
+    </string-array>
+
+    <string-array name="banner_list">
+        <item>https://file.mk.co.kr/meet/neds/2018/08/image_readtop_2018_509798_15342249993422495.jpg</item>
+        <item>https://i.pinimg.com/originals/2e/05/98/2e0598199d1650b68fd4cfa96791cf2b.jpg</item>
+        <item>https://file.mk.co.kr/meet/neds/2018/08/image_readtop_2018_509798_15342249993422495.jpg</item>
+    </string-array>
+
+    <string-array name="price_list">
+        <item>https://i.pinimg.com/originals/45/6d/39/456d3971e9abaecbad590882348d594b.png</item>
+        <item>https://mblogthumb-phinf.pstatic.net/MjAxODA3MDVfMTIg/MDAxNTMwNzY3ODE2NTI3.AuhXrdS5qRjRaLxXAvY5E3Ha4TicW3ioLAi5aXWvQnMg.WMkxhLjskK5BpMpPrw93dROFpWw1pbCmuoaUlzyuogQg.PNG.super5688/야놀자2.png?type=w800</item>
+        <item>https://i.pinimg.com/originals/45/6d/39/456d3971e9abaecbad590882348d594b.png</item>
+    </string-array>
+
+    <!-- tools -->
+    <string name="bus">고속버스</string>
+    <string name="noltech">돈버는놀테크</string>
+    <string name="jeju">제주도</string>
+    <string name="room">숙소</string>
+    <string name="one">1</string>
+    <string name="ramen">[GS25] 유어스)틈새라면(용기)</string>
+    <string name="price">1,100원</string>
 </resources>

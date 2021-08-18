@@ -4,15 +4,42 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayoutMediator
+import com.java.core.base.BindingFragment
+import com.java.core.util.stringListFrom
+import com.java.home.adapter.HomeViewPagerAdapter
+import com.java.home.databinding.FragmentHomeBinding
+import com.java.home.recommand.RecommendFragment
 
-class HomeFragment : Fragment() {
+class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    ): View {
+        super.onCreateView(inflater, container, savedInstanceState)
+        initHomeViewPager()
+        return binding.root
+    }
+
+    private fun initHomeViewPager() {
+        binding.apply {
+            val homeViewPagerAdapter = HomeViewPagerAdapter(requireActivity())
+
+            with(homeViewPagerAdapter) {
+                fragmentList = listOf(
+                    RecommendFragment(),
+                    EmptyFragment(),
+                    EmptyFragment(),
+                    EmptyFragment(),
+                    EmptyFragment()
+                )
+                vpMain.adapter = homeViewPagerAdapter
+            }
+
+            TabLayoutMediator(tlCategory, vpMain) { tab, position ->
+                tab.text = stringListFrom(R.array.tab_text)[position]
+            }.attach()
+        }
     }
 }
