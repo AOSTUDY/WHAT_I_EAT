@@ -1,22 +1,13 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("kotlin-kapt")
     kotlin("plugin.serialization") version Versions.kotlinVersion
     id("org.jlleitschuh.gradle.ktlint")
-    id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
-    id("kotlin-android")
-}
-
-android {
-    buildFeatures {
-        dataBinding = true
-    }
 }
 
 dependencies {
-    implementation(project(":core:"))
-    implementation(project(":data"))
     // Android Core
     implementation(KotlinDependencies.kotlin)
     implementation(AndroidXDependencies.coreKtx)
@@ -34,6 +25,9 @@ dependencies {
     // Jetpack Navigation Component
     implementation(AndroidXDependencies.navigationFragment)
     implementation(AndroidXDependencies.navigationUI)
+
+    // Jetpack Security
+    implementation(AndroidXDependencies.security)
 
     // Jetpack Fragment
     implementation(AndroidXDependencies.fragment)

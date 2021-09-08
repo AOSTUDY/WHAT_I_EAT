@@ -64,8 +64,8 @@
                     app:spanCount="5"
                     tools:listitem="@layout/item_recommend" />
 
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/vp_ad"
+                <com.java.core.util.NestedScrollableHost
+                    android:id="@+id/nsh_vp_ad"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginTop="10dp"
@@ -73,7 +73,13 @@
                     app:layout_constraintBottom_toTopOf="@+id/tv_special_price"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rv_special" />
+                    app:layout_constraintTop_toBottomOf="@+id/rv_special">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vp_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.java.core.util.NestedScrollableHost>
 
                 <TextView
                     android:id="@+id/tv_special_price"
@@ -97,8 +103,8 @@
                     android:text="@string/entire"
                     android:textColor="@color/white"
                     android:textSize="10sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/vp_ad"
-                    app:layout_constraintEnd_toEndOf="@+id/vp_ad" />
+                    app:layout_constraintBottom_toBottomOf="@+id/nsh_vp_ad"
+                    app:layout_constraintEnd_toEndOf="@+id/nsh_vp_ad" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_special_price"
@@ -132,10 +138,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_location"
+                    app:spanCount="4"
                     tools:listitem="@layout/item_location" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout

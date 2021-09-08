@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
-    kotlin("kapt")
+    id("kotlin-kapt")
     kotlin("plugin.serialization") version Versions.kotlinVersion
     id("org.jlleitschuh.gradle.ktlint")
     id("dagger.hilt.android.plugin")

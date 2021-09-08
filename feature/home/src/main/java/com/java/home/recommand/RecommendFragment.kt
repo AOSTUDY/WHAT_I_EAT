@@ -4,21 +4,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.google.android.material.chip.Chip
 import com.java.core.base.BindingFragment
 import com.java.core.util.stringListFrom
+import com.java.home.HomeViewModel
 import com.java.home.R
-import com.java.home.adapter.BannerAdapter
-import com.java.home.adapter.BenefitAdapter
-import com.java.home.adapter.LocationAdapter
-import com.java.home.adapter.NewAndHotAdapter
-import com.java.home.adapter.TodayPriceAdapter
+import com.java.home.adapter.*
 import com.java.home.databinding.FragmentRecommendBinding
 import com.java.home.util.ChipFactory
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fragment_recommend) {
     private val String.toChip: Chip
         get() = ChipFactory.create(layoutInflater).also { it.text = this }
+    private val viewModel by activityViewModels<HomeViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,

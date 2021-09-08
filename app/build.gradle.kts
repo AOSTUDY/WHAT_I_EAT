@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("kapt")
+    id("kotlin-kapt")
     id("org.jlleitschuh.gradle.ktlint")
     id("dagger.hilt.android.plugin")
 }
