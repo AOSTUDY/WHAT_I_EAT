@@ -19,8 +19,8 @@
         <entry key="feature/home/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="feature/home/src/main/res/layout/chip_choice.xml" value="0.5070448575274739" />
         <entry key="feature/home/src/main/res/layout/fragment_empty.xml" value="0.10029498525073746" />
-        <entry key="feature/home/src/main/res/layout/fragment_home.xml" value="0.303779236499457" />
-        <entry key="feature/home/src/main/res/layout/fragment_recommend.xml" value="0.2709832134292566" />
+        <entry key="feature/home/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="feature/home/src/main/res/layout/fragment_recommend.xml" value="0.1" />
         <entry key="feature/home/src/main/res/layout/fragment_today_top.xml" value="0.15668202764976957" />
         <entry key="feature/home/src/main/res/layout/item_banner.xml" value="0.2769607843137255" />
         <entry key="feature/home/src/main/res/layout/item_location.xml" value="0.31909271765866215" />
