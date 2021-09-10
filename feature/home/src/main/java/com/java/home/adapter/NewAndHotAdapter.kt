@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.java.data.model.LocalButtonData
 import com.java.home.R
 import com.java.home.databinding.ItemNewAndHotBinding
 
-class NewAndHotAdapter() : RecyclerView.Adapter<NewAndHotAdapter.NewAndHotViewHolder>() {
-    private val _data = mutableListOf<String>()
-    var data: List<String> = _data
+class NewAndHotAdapter : RecyclerView.Adapter<NewAndHotAdapter.NewAndHotViewHolder>() {
+    private val _data = mutableListOf<LocalButtonData>()
+    var data: List<LocalButtonData> = _data
         set(value) {
             _data.clear()
             _data.addAll(value)
@@ -33,8 +34,13 @@ class NewAndHotAdapter() : RecyclerView.Adapter<NewAndHotAdapter.NewAndHotViewHo
 
     class NewAndHotViewHolder(private val binding: ItemNewAndHotBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: String) {
-            binding.tvTitle.text = data
+        fun bind(data: LocalButtonData) {
+            data.apply {
+                binding.apply {
+                    tvTitle.text = name
+                    ivIcon.setImageResource(image)
+                }
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ android {
 
 dependencies {
     implementation(project(":core:"))
+    api(project(":data"))
     // Android Core
     implementation(KotlinDependencies.kotlin)
     implementation(AndroidXDependencies.coreKtx)
@@ -28,7 +29,6 @@ dependencies {
 
     // Dagger-Hilt
     implementation(AndroidXDependencies.hilt)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt(KaptDependencies.hiltCompiler)
 
     // Jetpack Navigation Component

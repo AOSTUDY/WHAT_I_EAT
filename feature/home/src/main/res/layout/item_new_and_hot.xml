@@ -27,11 +27,11 @@
                 android:layout_width="@dimen/new_and_hot_width"
                 android:layout_height="@dimen/new_and_hot_width"
                 android:background="@drawable/oval_fill_pink"
-                android:src="@drawable/ic_search"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_search" />
 
             <TextView
                 android:id="@+id/tv_title"

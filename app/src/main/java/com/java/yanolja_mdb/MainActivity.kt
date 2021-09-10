@@ -6,7 +6,9 @@ import com.java.core.util.replace
 import com.java.home.EmptyFragment
 import com.java.home.HomeFragment
 import com.java.yanolja_mdb.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val homeFragment: HomeFragment by lazy { HomeFragment() }
     private val emptyFragment: EmptyFragment by lazy { EmptyFragment() }

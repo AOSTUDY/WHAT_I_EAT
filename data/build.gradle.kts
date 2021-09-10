@@ -1,41 +1,13 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     id("kotlin-kapt")
+    kotlin("plugin.serialization") version Versions.kotlinVersion
     id("org.jlleitschuh.gradle.ktlint")
     id("dagger.hilt.android.plugin")
 }
 
-android {
-    defaultConfig {
-        applicationId = Constants.packageName
-        versionCode = Constants.versionCode
-        versionName = Constants.versionName
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = true
-
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    kotlinOptions {
-        val options = this
-        options.jvmTarget = Versions.jvmVersion
-    }
-    buildFeatures {
-        dataBinding = true
-    }
-}
-
 dependencies {
-    implementation(project(":feature:home"))
-    implementation(project(":core:"))
-
     // Android Core
     implementation(KotlinDependencies.kotlin)
     implementation(AndroidXDependencies.coreKtx)
@@ -79,6 +51,9 @@ dependencies {
 
     // Automatic Record OpenSource Library List
     implementation(ThirdPartyDependencies.ossLicense)
+
+    // kotlinx-serialization-json
+    implementation(ThirdPartyDependencies.kotlinxSerializationJsonConverter)
 
     // Test Dependency
     testImplementation(TestDependencies.androidTest)
