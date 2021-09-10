@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.java.home.R
 import com.java.home.databinding.ItemBannerBinding
 
-class BannerAdapter() : RecyclerView.Adapter<BannerAdapter.BannerViewHolder>() {
+class BannerAdapter : RecyclerView.Adapter<BannerAdapter.BannerViewHolder>() {
     private val _data = mutableListOf<String>()
     var data: List<String> = _data
         set(value) {

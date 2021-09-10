@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.java.home.R
 import com.java.home.databinding.ItemTodayPriceBinding
 
-class TodayPriceAdapter() : RecyclerView.Adapter<TodayPriceAdapter.TodayPriceViewHolder>() {
+class TodayPriceAdapter : RecyclerView.Adapter<TodayPriceAdapter.TodayPriceViewHolder>() {
     private val _data = mutableListOf<String>()
     var data: List<String> = _data
         set(value) {
@@ -35,7 +35,9 @@ class TodayPriceAdapter() : RecyclerView.Adapter<TodayPriceAdapter.TodayPriceVie
     class TodayPriceViewHolder(private val binding: ItemTodayPriceBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: String) {
-            Glide.with(binding.ivBanner).load(data).into(binding.ivBanner)
+            binding.apply {
+                Glide.with(ivBanner).load(data).into(ivBanner)
+            }
         }
     }
 }

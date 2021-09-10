@@ -10,9 +10,7 @@ import com.java.core.util.stringListFrom
 import com.java.home.adapter.HomeViewPagerAdapter
 import com.java.home.databinding.FragmentHomeBinding
 import com.java.home.recommand.RecommendFragment
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onCreateView(
         inflater: LayoutInflater,

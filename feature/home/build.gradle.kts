@@ -16,7 +16,7 @@ android {
 
 dependencies {
     implementation(project(":core:"))
-    implementation(project(":data"))
+    api(project(":data"))
     // Android Core
     implementation(KotlinDependencies.kotlin)
     implementation(AndroidXDependencies.coreKtx)
