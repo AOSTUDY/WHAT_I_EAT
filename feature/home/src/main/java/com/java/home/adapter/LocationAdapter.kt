@@ -5,12 +5,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.java.data.model.TripData
 import com.java.home.R
 import com.java.home.databinding.ItemLocationBinding
 
-class LocationAdapter() : RecyclerView.Adapter<LocationAdapter.LocationViewHolder>() {
-    private val _data = mutableListOf<String>()
-    var data: List<String> = _data
+class LocationAdapter : RecyclerView.Adapter<LocationAdapter.LocationViewHolder>() {
+    private val _data = mutableListOf<TripData>()
+    var data: List<TripData> = _data
         set(value) {
             _data.clear()
             _data.addAll(value)
@@ -34,11 +35,15 @@ class LocationAdapter() : RecyclerView.Adapter<LocationAdapter.LocationViewHolde
 
     class LocationViewHolder(private val binding: ItemLocationBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: String) {
-            binding.tvLocation.text = data
-            Glide.with(binding.ivLocation)
-                .load("https://i.insider.com/58525b95dd0895b7548b4b08?width=700").circleCrop()
-                .into(binding.ivLocation)
+        fun bind(data: TripData) {
+            binding.apply {
+                with(data) {
+                    tvLocation.text = name
+                    Glide.with(ivLocation)
+                        .load(image).circleCrop()
+                        .into(ivLocation)
+                }
+            }
         }
     }
 }
