@@ -8,8 +8,8 @@ import com.java.data.HomeRepository
 import com.java.data.model.LocalButtonData
 import com.java.data.model.TripData
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlinx.coroutines.launch
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(private val homeRepository: HomeRepository) : ViewModel() {
